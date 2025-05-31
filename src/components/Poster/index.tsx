@@ -1,5 +1,5 @@
-import type { ImgHTMLAttributes } from "react";
-import styles from "./index.module.scss";
+import type { ImgHTMLAttributes } from 'react';
+import styles from './index.module.scss';
 
 type PosterWidth = 92 | 154 | 185 | 342 | 500 | 780;
 
@@ -7,7 +7,7 @@ const Poster = ({
   title,
   poster_path,
   width = 342,
-  className = "",
+  className = '',
   ...props
 }: {
   title: string;
@@ -19,7 +19,7 @@ const Poster = ({
 
   return (
     <img
-      src={posterUrl || "src/assets/no-poster.svg"}
+      src={posterUrl || 'src/assets/no-poster.svg'}
       alt={title}
       className={`${styles.poster} ${className}`}
       {...props}

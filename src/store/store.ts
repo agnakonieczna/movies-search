@@ -1,13 +1,13 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { persistStore, persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
-import { PERSIST, REHYDRATE } from "redux-persist/es/constants";
-import { moviesApi } from "../services/moviesApi.ts";
-import favouriteMoviesReducer from "./slices/favouriteMoviesSlice.ts";
-import queryReducer from "./slices/querySlice.ts";
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import { PERSIST, REHYDRATE } from 'redux-persist/es/constants';
+import { moviesApi } from '../services/moviesApi.ts';
+import favouriteMoviesReducer from './slices/favouriteMoviesSlice.ts';
+import queryReducer from './slices/querySlice.ts';
 
 const persistConfig = {
-  key: "root",
+  key: 'root',
   storage,
 };
 

@@ -1,12 +1,12 @@
-import type { HTMLAttributes } from "react";
-import styles from "./index.module.scss";
+import type { HTMLAttributes } from 'react';
+import styles from './index.module.scss';
 
 const EmptyView = ({ children, ...props }: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div className={styles.container} {...props}>
       <img
         className={styles.img}
-        src={"src/assets/sad-face.svg"}
+        src={'src/assets/sad-face.svg'}
         alt="sad-face-icon"
       />
       {children}

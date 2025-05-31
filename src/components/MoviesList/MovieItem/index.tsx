@@ -1,9 +1,9 @@
-import { Link } from "react-router";
-import type { Movie } from "../../../services/types.ts";
-import MovieRating from "../../MovieRating";
-import Poster from "../../Poster";
-import SmallText from "../../common/SmallText";
-import styles from "./index.module.scss";
+import { Link } from 'react-router';
+import type { Movie } from '../../../services/types.ts';
+import MovieRating from '../../MovieRating';
+import Poster from '../../Poster';
+import SmallText from '../../common/SmallText';
+import styles from './index.module.scss';
 
 const MovieItem = ({ movie }: { movie: Movie }) => {
   return (

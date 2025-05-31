@@ -10,7 +10,8 @@ A simple movie browsing app where users can search for movies, view detailed inf
 
 ## 🚀 Tech stack
 
-The App was created with the following tech stack: 
+The App was created with the following tech stack:
+
 - Vite
 - React
 - React Router

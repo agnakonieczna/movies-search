@@ -1,8 +1,8 @@
-import type { HTMLAttributes } from "react";
-import styles from "./index.module.scss";
+import type { HTMLAttributes } from 'react';
+import styles from './index.module.scss';
 
 const SmallText = ({
-  className = "",
+  className = '',
   ...props
 }: HTMLAttributes<HTMLParagraphElement>) => {
   return <p className={`${styles.small_text} ${className}`} {...props} />;

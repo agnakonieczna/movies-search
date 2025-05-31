@@ -1,18 +1,18 @@
-import { useSearchMoviesQuery } from "../../services/moviesApi.ts";
-import Pagination from "../Pagination";
-import Error from "../views/ErrorView";
-import MovieItem from "./MovieItem";
-import Loading from "../views/LoadingView";
-import { useSearchParams } from "react-router";
-import { skipToken } from "@reduxjs/toolkit/query";
-import EmptyView from "../views/EmptyView";
-import { Title, Text } from "../common";
-import styles from "./index.module.scss";
+import { useSearchMoviesQuery } from '../../services/moviesApi.ts';
+import Pagination from '../Pagination';
+import Error from '../views/ErrorView';
+import MovieItem from './MovieItem';
+import Loading from '../views/LoadingView';
+import { useSearchParams } from 'react-router';
+import { skipToken } from '@reduxjs/toolkit/query';
+import EmptyView from '../views/EmptyView';
+import { Title, Text } from '../common';
+import styles from './index.module.scss';
 
 const MoviesList = () => {
   const [searchParams] = useSearchParams();
-  const query = searchParams.get("query");
-  const page = Number(searchParams.get("page")) || 1;
+  const query = searchParams.get('query');
+  const page = Number(searchParams.get('page')) || 1;
   const {
     data: movies,
     error,

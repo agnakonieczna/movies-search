@@ -1,18 +1,18 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import type { MovieDetails, MoviesSearchResult } from "./types.ts";
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import type { MovieDetails, MoviesSearchResult } from './types.ts';
 
 const token = import.meta.env.VITE_API_TOKEN;
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "https://api.themoviedb.org/3/",
+  baseUrl: 'https://api.themoviedb.org/3/',
   prepareHeaders: (headers) => {
-    headers.set("Authorization", `Bearer ${token}`);
+    headers.set('Authorization', `Bearer ${token}`);
     return headers;
   },
 });
 
 export const moviesApi = createApi({
-  reducerPath: "moviesApi",
+  reducerPath: 'moviesApi',
   baseQuery: baseQuery,
   endpoints: (builder) => ({
     searchMovies: builder.query<

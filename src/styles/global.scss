@@ -1,4 +1,4 @@
-@use "colors" as *;
+@use 'colors' as *;
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 *,
@@ -10,13 +10,31 @@
 }
 
 body,
-h1, h2, h3, h4, h5, h6,
-p, figure, blockquote, dl, dd {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -29,21 +47,29 @@ html,
 
 body {
   line-height: 1.5;
-  font-family: "Raleway", system-ui, -apple-system, sans-serif;
+  font-family:
+    'Raleway',
+    system-ui,
+    -apple-system,
+    sans-serif;
   background-color: $primary-black;
   color: $primary-white;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote::before, blockquote::after,
-q::before, q::after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: none;
 }
 
@@ -63,7 +89,7 @@ img {
   height: auto;
 }
 
-input[type="search" i]::-webkit-search-cancel-button {
+input[type='search' i]::-webkit-search-cancel-button {
   filter: brightness(100);
   opacity: 1;
   margin-right: 5px;

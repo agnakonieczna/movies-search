@@ -1,10 +1,10 @@
-import { MicroText, Text, Title } from "../common";
-import Poster from "../Poster";
-import MovieRating from "../MovieRating";
-import MovieTag from "../MovieTag";
-import FavouritesButton from "../FavouriteButton";
-import type { MovieDetails } from "../../services/types.ts";
-import styles from "./index.module.scss";
+import { MicroText, Text, Title } from '../common';
+import Poster from '../Poster';
+import MovieRating from '../MovieRating';
+import MovieTag from '../MovieTag';
+import FavouritesButton from '../FavouriteButton';
+import type { MovieDetails } from '../../services/types.ts';
+import styles from './index.module.scss';
 
 const MovieDetailsCard = ({ movieDetails }: { movieDetails: MovieDetails }) => {
   return (

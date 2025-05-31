@@ -1,8 +1,8 @@
-import type { HTMLAttributes } from "react";
-import styles from "./index.module.scss";
+import type { HTMLAttributes } from 'react';
+import styles from './index.module.scss';
 
 const MicroText = ({
-  className = "",
+  className = '',
   ...props
 }: HTMLAttributes<HTMLParagraphElement>) => {
   return <p className={`${styles.micro_text} ${className}`} {...props} />;

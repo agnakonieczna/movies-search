@@ -1,8 +1,8 @@
-import type { ButtonHTMLAttributes } from "react";
-import styles from "./index.module.scss";
+import type { ButtonHTMLAttributes } from 'react';
+import styles from './index.module.scss';
 
 const Button = ({
-  className = "",
+  className = '',
   ...props
 }: ButtonHTMLAttributes<HTMLButtonElement>) => {
   return <button className={`${styles.button} ${className}`} {...props} />;

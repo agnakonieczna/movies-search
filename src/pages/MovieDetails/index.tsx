@@ -1,5 +1,5 @@
-import { useParams } from "react-router";
-import MovieDetails from "../../components/MovieDetails";
+import { useParams } from 'react-router';
+import MovieDetails from '../../components/MovieDetails';
 
 const Movie = () => {
   const { id } = useParams();

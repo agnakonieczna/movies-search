@@ -1,12 +1,12 @@
-import { skipToken } from "@reduxjs/toolkit/query";
-import { useNavigate } from "react-router";
-import { useGetMovieDetailsQuery } from "../../services/moviesApi.ts";
-import { PreviousIcon, Title } from "../common";
-import Error from "../views/ErrorView";
-import Loading from "../views/LoadingView";
-import EmptyView from "../views/EmptyView";
-import MovieDetailsCard from "../MovieDetailsCard";
-import styles from "./index.module.scss";
+import { skipToken } from '@reduxjs/toolkit/query';
+import { useNavigate } from 'react-router';
+import { useGetMovieDetailsQuery } from '../../services/moviesApi.ts';
+import { PreviousIcon, Title } from '../common';
+import Error from '../views/ErrorView';
+import Loading from '../views/LoadingView';
+import EmptyView from '../views/EmptyView';
+import MovieDetailsCard from '../MovieDetailsCard';
+import styles from './index.module.scss';
 
 const MovieDetails = ({ id }: { id?: string }) => {
   const navigate = useNavigate();

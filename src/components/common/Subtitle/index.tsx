@@ -1,8 +1,8 @@
-import type { HTMLAttributes } from "react";
-import styles from "./index.module.scss";
+import type { HTMLAttributes } from 'react';
+import styles from './index.module.scss';
 
 const Subtitle = ({
-  className = "",
+  className = '',
   ...props
 }: HTMLAttributes<HTMLHeadingElement>) => {
   return <h2 className={`${styles.subtitle} ${className}`} {...props} />;

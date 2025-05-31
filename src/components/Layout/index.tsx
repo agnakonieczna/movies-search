@@ -1,6 +1,6 @@
-import { Outlet, NavLink } from "react-router";
-import { LogoIcon } from "../common";
-import styles from "./index.module.scss";
+import { Outlet, NavLink } from 'react-router';
+import { LogoIcon } from '../common';
+import styles from './index.module.scss';
 
 const Layout = () => {
   const getClassName = ({ isActive }: { isActive: boolean }) =>

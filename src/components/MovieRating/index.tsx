@@ -1,6 +1,6 @@
-import type { HTMLAttributes } from "react";
-import { MicroText, StarIcon } from "../common";
-import MovieTag from "../MovieTag";
+import type { HTMLAttributes } from 'react';
+import { MicroText, StarIcon } from '../common';
+import MovieTag from '../MovieTag';
 
 const MovieRating = ({
   vote_average,

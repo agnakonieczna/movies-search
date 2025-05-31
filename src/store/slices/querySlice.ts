@@ -1,10 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "../store.ts";
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import type { RootState } from '../store.ts';
 
 const querySlice = createSlice({
-  name: "query",
-  initialState: "",
+  name: 'query',
+  initialState: '',
   reducers: {
     addQuery: (_, action: PayloadAction<string>) => action.payload,
   },

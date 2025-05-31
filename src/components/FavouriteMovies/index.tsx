@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux";
-import { selectFavouriteMovies } from "../../store/slices/favouriteMoviesSlice.ts";
-import { Title } from "../common";
-import EmptyView from "../views/EmptyView";
-import MovieDetailsCard from "../MovieDetailsCard";
-import styles from "./index.module.scss";
+import { useSelector } from 'react-redux';
+import { selectFavouriteMovies } from '../../store/slices/favouriteMoviesSlice.ts';
+import { Title } from '../common';
+import EmptyView from '../views/EmptyView';
+import MovieDetailsCard from '../MovieDetailsCard';
+import styles from './index.module.scss';
 
 const FavouriteMovies = () => {
   const favouriteMovies = useSelector(selectFavouriteMovies);
