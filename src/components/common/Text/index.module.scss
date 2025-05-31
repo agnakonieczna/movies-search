@@ -1,0 +1,6 @@
+@use '../../../styles/fontSize' as *;
+
+.text {
+  font-size: $font-size-normal;
+  line-height: 1.5;
+}

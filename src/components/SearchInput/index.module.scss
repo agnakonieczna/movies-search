@@ -1,0 +1,22 @@
+@use '../../styles/colors' as *;
+
+.input {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid $primary-gray-base;
+  border-radius: 8px;
+  background: $primary-gray-dark url('src/assets/search.svg') no-repeat 12px
+    center;
+  background-size: 20px 20px;
+  color: $primary-white;
+  transition: border 0.2s ease;
+  font-size: 16px;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $primary-purple-dark;
+  }
+}

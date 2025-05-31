@@ -1,0 +1,11 @@
+@use '../../styles/colors' as *;
+
+.tag {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-gray-dark;
+  padding: 8px;
+  border-radius: 8px;
+}

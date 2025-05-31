@@ -1,0 +1,41 @@
+@use '../../styles/colors' as *;
+
+.container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.25s;
+  color: $primary-white;
+
+  &:hover {
+    background-color: $primary-purple-base;
+  }
+
+  &:disabled {
+    color: $primary-gray-dark;
+
+    &:hover {
+      cursor: unset;
+      background-color: transparent;
+    }
+  }
+}
+
+.active_button {
+  background-color: $primary-purple-base;
+}

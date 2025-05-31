@@ -1,0 +1,7 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/fontSize' as *;
+
+.micro_text {
+  font-size: $font-size-small;
+  line-height: 1;
+}

@@ -1,0 +1,55 @@
+@use '../../styles/colors' as *;
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.poster {
+  flex: 0 0 220px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  @media (min-width: 576px) {
+    align-items: flex-start;
+  }
+}
+
+.title_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+  }
+}
+
+.overview {
+  text-align: center;
+
+  @media (min-width: 576px) {
+    text-align: left;
+  }
+}
+
+.genres {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}

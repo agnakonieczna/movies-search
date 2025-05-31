@@ -1,0 +1,10 @@
+@use '../../styles/colors' as *;
+
+.back_button {
+  background-color: transparent;
+  color: $primary-white;
+  border: none;
+  align-self: flex-start;
+  padding-bottom: 32px;
+  cursor: pointer;
+}
