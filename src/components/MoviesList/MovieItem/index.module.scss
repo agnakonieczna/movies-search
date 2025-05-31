@@ -1,0 +1,27 @@
+@use '../../../styles/colors' as *;
+
+.link {
+  position: relative;
+  width: 185px;
+  margin: 0 auto;
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.rating {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

@@ -1,0 +1,7 @@
+@use "../../../styles/colors" as *;
+@use "../../../styles/fontSize" as *;
+
+.subtitle {
+  font-weight: 500;
+  font-size: $font-size-medium;
+}

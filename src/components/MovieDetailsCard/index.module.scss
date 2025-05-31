@@ -1,0 +1,44 @@
+@use "../../styles/colors" as *;
+@use "../../styles/mixins" as *;
+
+.container {
+  width: 100%;
+  @include flex($gap: 32px, $direction: column);
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.poster {
+  flex: 0 0 220px;
+}
+
+.details {
+  @include flex($direction: column);
+
+  @media (min-width: 576px) {
+    align-items: flex-start;
+  }
+}
+
+.title_wrapper {
+  @include flex($wrap: wrap);
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+  }
+}
+
+.overview {
+  text-align: center;
+
+  @media (min-width: 576px) {
+    text-align: left;
+  }
+}
+
+.genres {
+  @include flex($gap: 4px, $wrap: wrap)
+}

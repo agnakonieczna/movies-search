@@ -1,0 +1,13 @@
+@use '../../styles/mixins' as *;
+
+.container {
+  align-items: flex-start;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.movies_container {
+  gap: 32px
+}

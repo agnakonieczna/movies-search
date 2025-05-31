@@ -1,0 +1,47 @@
+@use "../../styles/colors" as *;
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $primary-purple-base;
+  padding: 8px;
+}
+
+.nav {
+  max-width: 1280px;
+}
+
+.link {
+  align-items: center;
+  color: $primary-white;
+  font-weight: 500;
+  transition: color 0.5s ease;
+  padding: 0 16px;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-purple-dark;
+  }
+}
+
+.active {
+  color: $primary-purple-dark;
+}
+
+.main {
+  width: 100%;
+  padding: 16px;
+  margin: 0 auto;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
