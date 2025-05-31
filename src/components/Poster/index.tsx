@@ -6,8 +6,8 @@ type PosterWidth = 92 | 154 | 185 | 342 | 500 | 780;
 const Poster = ({
   title,
   poster_path,
-  width = 185,
-  className,
+  width = 342,
+  className = "",
   ...props
 }: {
   title: string;

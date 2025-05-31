@@ -17,9 +17,9 @@ const MovieDetailsCard = ({ movieDetails }: { movieDetails: MovieDetails }) => {
       <div className={styles.details}>
         <div className={styles.title_wrapper}>
           <Title>{movieDetails.title}</Title>
-          <MovieRating vote_average={movieDetails.vote_average} />
+          <MovieRating vote_average={movieDetails.vote_average || 0} />
         </div>
-        {movieDetails.genres.length > 0 && (
+        {movieDetails.genres?.length > 0 && (
           <div className={styles.genres}>
             {movieDetails.genres.map((genre) => (
               <MovieTag key={genre.id}>
@@ -28,7 +28,9 @@ const MovieDetailsCard = ({ movieDetails }: { movieDetails: MovieDetails }) => {
             ))}
           </div>
         )}
-        <Text className={styles.overview}>{movieDetails.overview}</Text>
+        {movieDetails.overview && (
+          <Text className={styles.overview}>{movieDetails.overview}</Text>
+        )}
         <FavouritesButton movieDetails={movieDetails} />
       </div>
     </div>

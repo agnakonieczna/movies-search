@@ -1,8 +1,10 @@
-@use '../../styles/mixins' as *;
 @use '../../styles/colors' as *;
 
 .tag {
-  @include flex($gap: 8px, $justify: center);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
   background-color: $primary-gray-dark;
   padding: 8px;
   border-radius: 8px;

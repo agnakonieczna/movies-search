@@ -1,5 +1,3 @@
-import RowFlex from "./Flex/RowFlex";
-import ColumnFlex from "./Flex/ColumnFlex";
 import Button from "./Button";
 import Title from "./Title";
 import Subtitle from "./Subtitle";
@@ -13,8 +11,6 @@ import PreviousIcon from "./Icons/PreviousIcon.tsx";
 import NextIcon from "./Icons/NextIcon.tsx";
 
 export {
-  RowFlex,
-  ColumnFlex,
   Button,
   Title,
   Subtitle,

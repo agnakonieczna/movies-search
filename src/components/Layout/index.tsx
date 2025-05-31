@@ -7,7 +7,7 @@ const Layout = () => {
     isActive ? `${styles.link} ${styles.active}` : styles.link;
 
   return (
-    <div className={styles.app}>
+    <div className={styles.container}>
       <header className={styles.header}>
         <LogoIcon />
         <nav className={styles.nav}>

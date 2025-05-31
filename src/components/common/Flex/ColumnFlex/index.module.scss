@@ -1,6 +1,0 @@
-@use "../../../../styles/mixins" as *;
-
-.column_flex {
-  width: 100%;
-  @include flex($direction: column)
-}

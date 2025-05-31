@@ -1,9 +1,10 @@
 @use "../../styles/colors" as *;
-@use "../../styles/mixins" as *;
 
 .container {
   width: 100%;
-  @include flex($gap: 32px, $direction: column);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 
   @media (min-width: 576px) {
     flex-direction: row;
@@ -16,7 +17,10 @@
 }
 
 .details {
-  @include flex($direction: column);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 
   @media (min-width: 576px) {
     align-items: flex-start;
@@ -24,7 +28,11 @@
 }
 
 .title_wrapper {
-  @include flex($wrap: wrap);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
 
   @media (min-width: 576px) {
     flex-direction: row;
@@ -40,5 +48,8 @@
 }
 
 .genres {
-  @include flex($gap: 4px, $wrap: wrap)
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
 }

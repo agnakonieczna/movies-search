@@ -13,7 +13,7 @@ const MovieItem = ({ movie }: { movie: Movie }) => {
         <SmallText className={styles.title}>{movie.title}</SmallText>
         <MovieRating
           className={styles.rating}
-          vote_average={movie.vote_average}
+          vote_average={movie.vote_average || 0}
         />
       </div>
     </Link>
