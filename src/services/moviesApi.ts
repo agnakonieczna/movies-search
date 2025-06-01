@@ -1,7 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import type { MovieDetails, MoviesSearchResult } from './types.ts';
+import { config } from '../config.ts';
 
-const token = import.meta.env.VITE_API_TOKEN;
+const token = config.apiToken;
 
 const baseQuery = fetchBaseQuery({
   baseUrl: 'https://api.themoviedb.org/3/',

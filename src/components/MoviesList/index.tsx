@@ -31,7 +31,7 @@ const MoviesList = ({
 
   if (!query) {
     return (
-      <Text className={styles.text}>
+      <Text className={styles.text} data-testid="helper-text">
         Begin typing to find your next favorite film.
       </Text>
     );

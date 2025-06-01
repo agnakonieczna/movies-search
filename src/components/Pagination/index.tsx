@@ -37,7 +37,7 @@ const Pagination = ({
 
   return (
     totalPages > 1 && (
-      <div className={styles.container}>
+      <div className={styles.container} data-testid="pagination">
         <button
           disabled={currentPage === 1}
           onClick={() => onPageChange(currentPage - 1)}
