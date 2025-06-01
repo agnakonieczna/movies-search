@@ -17,3 +17,6 @@ The App was created with the following tech stack:
 - React Router
 - Redux Toolkit
 - RTK Query
+
+🔐 This project uses a public API token via import.meta.env.VITE_API_TOKEN, which is exposed in the frontend code.
+This approach is used only for demonstration and educational purposes.

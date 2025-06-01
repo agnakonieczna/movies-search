@@ -4,20 +4,18 @@ import {
   selectFavouriteMovies,
   toggleFavouriteMovie,
 } from '../../store/slices/favouriteMoviesSlice.ts';
-import type { MovieDetails } from '../../services/types.ts';
 
-const FavouritesButton = ({ movieDetails }: { movieDetails: MovieDetails }) => {
+const FavouritesButton = ({ movieId }: { movieId: number }) => {
   const dispatch = useDispatch();
   const favouritesMovies = useSelector(selectFavouriteMovies);
-  const isFavouriteMovieAdded = favouritesMovies.find(
-    (movie) => movie.id === movieDetails.id
-  );
-  const handleAddToFavourites = (movieDetails: MovieDetails) => {
-    dispatch(toggleFavouriteMovie(movieDetails));
+  const isFavouriteMovieAdded = favouritesMovies.includes(movieId);
+
+  const handleAddToFavourites = (movieId: number) => {
+    dispatch(toggleFavouriteMovie(movieId));
   };
 
   return (
-    <Button onClick={() => handleAddToFavourites(movieDetails)}>
+    <Button onClick={() => handleAddToFavourites(movieId)}>
       {isFavouriteMovieAdded ? 'Remove from favourites' : 'Add to favourites'}
     </Button>
   );

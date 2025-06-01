@@ -19,8 +19,13 @@ export const moviesApi = createApi({
       MoviesSearchResult,
       { query: string; page: number }
     >({
-      query: ({ query, page }) =>
-        `search/movie?query=${encodeURIComponent(query)}&page=${page}`,
+      query: ({ query, page }) => {
+        const queryParams = new URLSearchParams({
+          query,
+          page: page.toString(),
+        });
+        return `search/movie?${queryParams.toString()}`;
+      },
     }),
     getMovieDetails: builder.query<MovieDetails, string>({
       query: (id) => `movie/${id}`,

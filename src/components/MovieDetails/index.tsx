@@ -34,7 +34,7 @@ const MovieDetails = ({ id }: { id?: string }) => {
       <button onClick={() => navigate(-1)} className={styles.back_button}>
         <PreviousIcon width={32} height={32} />
       </button>
-      <MovieDetailsCard movieDetails={movieDetails} />
+      <MovieDetailsCard {...movieDetails} />
     </>
   );
 };

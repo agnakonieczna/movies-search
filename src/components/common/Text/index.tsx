@@ -1,11 +1,12 @@
 import type { HTMLAttributes } from 'react';
 import styles from './index.module.scss';
+import classNames from 'classnames';
 
 const Text = ({
-  className = '',
+  className,
   ...props
 }: HTMLAttributes<HTMLParagraphElement>) => {
-  return <p className={`${styles.text} ${className}`} {...props} />;
+  return <p className={classNames(styles.text, className)} {...props} />;
 };
 
 export default Text;

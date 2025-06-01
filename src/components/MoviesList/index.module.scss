@@ -1,9 +1,10 @@
+@use '../../styles/layout' as *;
+
 .grid {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(
-    auto-fill,
-    minmax(min(100% / 2, max(185px, 100% / 6)), 1fr)
+    auto-fill, minmax(min(100% / $min-in-row, max($card-width, 100% / $max-in-row)), 1fr)
   );
   gap: 16px;
   padding: 32px 0;
