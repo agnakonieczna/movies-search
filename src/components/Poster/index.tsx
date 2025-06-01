@@ -20,7 +20,7 @@ const Poster = ({
       src={
         poster_path
           ? `https://image.tmdb.org/t/p/w${width}${poster_path}`
-          : 'src/assets/no-poster.svg'
+          : '/images/no-poster.svg'
       }
       alt={title}
       className={classNames(styles.poster, className)}

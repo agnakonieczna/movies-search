@@ -1,0 +1,17 @@
+# Ignore all file for safety
+*
+
+# Allow only needed files and folders (allowlist)
+!/public
+!/src
+!/index.html
+!/nginx.conf
+!/package.json
+!/tsconfig.app.json
+!/tsconfig.json
+!/tsconfig.node.json
+!/vite.config.ts
+!/yarn.lock
+
+# Create .env.production with api token for testing the build, but don't commit the file
+!/.env.production
