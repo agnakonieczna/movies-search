@@ -6,7 +6,7 @@ const EmptyView = ({ children, ...props }: HTMLAttributes<HTMLDivElement>) => {
     <div className={styles.container} {...props}>
       <img
         className={styles.img}
-        src={'src/assets/sad-face.svg'}
+        src={'/images/sad-face.svg'}
         alt="sad-face-icon"
       />
       {children}
