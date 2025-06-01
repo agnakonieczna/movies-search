@@ -15,27 +15,6 @@
   padding: 8px;
 }
 
-.nav {
-  max-width: $max-width;
-}
-
-.link {
-  align-items: center;
-  color: $primary-white;
-  font-weight: 500;
-  transition: color 0.5s ease;
-  padding: 0 16px;
-  text-decoration: none;
-
-  &:hover {
-    color: $primary-purple-dark;
-  }
-}
-
-.active {
-  color: $primary-purple-dark;
-}
-
 .main {
   width: 100%;
   padding: 16px;
