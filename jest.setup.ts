@@ -1,5 +1,11 @@
 import '@testing-library/jest-dom';
 import { TextEncoder, TextDecoder } from 'util';
+import { server } from './src/test/mocks/node';
+import 'whatwg-fetch';
+
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());
 
 // Polyfill for TextEncoder
 if (typeof global.TextEncoder === 'undefined') {

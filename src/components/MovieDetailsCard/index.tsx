@@ -15,7 +15,7 @@ const MovieDetailsCard = ({
   overview,
 }: MovieDetails) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="movie-card-item">
       <Poster
         title={title}
         poster_path={poster_path}
@@ -24,7 +24,7 @@ const MovieDetailsCard = ({
       />
       <div className={styles.details}>
         <div className={styles.title_wrapper}>
-          <Subtitle data-testid={`movie-card-subtitle-${id}`}>{title}</Subtitle>
+          <Subtitle data-testid={`movie-card-title-${id}`}>{title}</Subtitle>
           <MovieRating
             data-testid={`movie-card-rating-${id}`}
             vote_average={vote_average}

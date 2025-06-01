@@ -1,8 +1,7 @@
 import { render, RenderOptions } from '@testing-library/react';
-import { AppStore, RootState, setupStore } from './store/store';
+import { AppStore, RootState, setupStore } from '../store/store.ts';
 import { PropsWithChildren, ReactElement } from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router';
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
   preloadedState?: Partial<RootState>;
@@ -21,9 +20,7 @@ export function renderWithProviders(
   } = extendedRenderOptions;
 
   const Wrapper = ({ children }: PropsWithChildren) => (
-    <BrowserRouter>
-      <Provider store={store}>{children}</Provider>
-    </BrowserRouter>
+    <Provider store={store}>{children}</Provider>
   );
 
   // Return an object with the store and all of RTL's query functions

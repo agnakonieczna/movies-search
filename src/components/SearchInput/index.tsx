@@ -13,6 +13,7 @@ const SearchInput = ({
 }) => {
   return (
     <input
+      data-testid="search-input"
       className={styles.input}
       type="search"
       placeholder="Search movies"
