@@ -1,4 +1,5 @@
 @use '../../styles/colors' as *;
+@use '../../styles/utils' as *;
 
 .container {
   width: 100%;
@@ -6,14 +7,16 @@
   flex-direction: column;
   gap: 32px;
 
-  @media (min-width: 576px) {
+  @include above-phone {
     flex-direction: row;
     align-items: flex-start;
   }
 }
 
 .poster {
-  flex: 0 0 220px;
+  @include above-phone {
+    max-width: 228px;
+  }
 }
 
 .details {
@@ -22,7 +25,7 @@
   align-items: center;
   gap: 16px;
 
-  @media (min-width: 576px) {
+  @include above-phone{
     align-items: flex-start;
   }
 }
@@ -34,7 +37,7 @@
   flex-wrap: wrap;
   gap: 16px;
 
-  @media (min-width: 576px) {
+  @include above-phone {
     flex-direction: row;
   }
 }
@@ -42,7 +45,7 @@
 .overview {
   text-align: center;
 
-  @media (min-width: 576px) {
+  @include above-phone {
     text-align: left;
   }
 }

@@ -1,24 +1,16 @@
-import { useCallback, useState } from 'react';
+import { type Dispatch, type SetStateAction } from 'react';
 import styles from './index.module.scss';
-import debounce from 'lodash/debounce';
-import { useSearchParams } from 'react-router';
+import type { DebouncedFunc } from 'lodash';
 
-const SearchInput = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const query = searchParams.get('query');
-  const [value, setValue] = useState(query || '');
-
-  const debouncedSetQuery = useCallback(
-    debounce((query: string) => {
-      if (query.length > 0) {
-        setSearchParams({ query, page: '1' }, { replace: true });
-      } else {
-        setSearchParams({}, { replace: true });
-      }
-    }, 1500),
-    []
-  );
-
+const SearchInput = ({
+  value,
+  setValue,
+  debouncedSetQuery,
+}: {
+  value: string;
+  setValue: Dispatch<SetStateAction<string>>;
+  debouncedSetQuery: DebouncedFunc<(query: string) => void>;
+}) => {
   return (
     <input
       className={styles.input}

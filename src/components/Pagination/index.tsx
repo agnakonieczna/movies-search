@@ -1,7 +1,6 @@
 import { useMemo } from 'react';
 import { NextIcon, PreviousIcon } from '../common';
 import styles from './index.module.scss';
-import { useSearchParams } from 'react-router';
 
 const getPaginationItems = (current: number, total: number) => {
   const currentItems = [current - 1, current, current + 1].filter(
@@ -22,36 +21,26 @@ const getPaginationItems = (current: number, total: number) => {
   );
 };
 
-const Pagination = ({ totalPages }: { totalPages: number }) => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const currentPage = Number(searchParams.get('page')) || 1;
+const Pagination = ({
+  currentPage,
+  totalPages,
+  onPageChange,
+}: {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}) => {
   const pages = useMemo(
     () => getPaginationItems(currentPage, totalPages),
     [currentPage, totalPages]
   );
-
-  const handlePreviousClick = () => {
-    const previousPage = currentPage - 1;
-    setSearchParams((searchParams) => {
-      searchParams.set('page', previousPage.toString());
-      return searchParams;
-    });
-  };
-
-  const handleNextClick = () => {
-    setSearchParams((searchParams) => {
-      const nextPage = currentPage + 1;
-      searchParams.set('page', nextPage.toString());
-      return searchParams;
-    });
-  };
 
   return (
     totalPages > 1 && (
       <div className={styles.container}>
         <button
           disabled={currentPage === 1}
-          onClick={handlePreviousClick}
+          onClick={() => onPageChange(currentPage - 1)}
           className={styles.button}
         >
           <PreviousIcon />
@@ -67,12 +56,7 @@ const Pagination = ({ totalPages }: { totalPages: number }) => {
                   ? `${styles.button} ${styles.active_button}`
                   : styles.button
               }
-              onClick={() => {
-                setSearchParams((searchParams) => {
-                  searchParams.set('page', page.toString());
-                  return searchParams;
-                });
-              }}
+              onClick={() => onPageChange(page)}
             >
               {page}
             </button>
@@ -80,7 +64,7 @@ const Pagination = ({ totalPages }: { totalPages: number }) => {
         )}
         <button
           className={styles.button}
-          onClick={handleNextClick}
+          onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
           <NextIcon />

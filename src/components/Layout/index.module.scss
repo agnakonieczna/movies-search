@@ -1,4 +1,5 @@
 @use '../../styles/colors' as *;
+@use '../../styles/layout' as *;
 
 .container {
   height: 100%;
@@ -15,7 +16,7 @@
 }
 
 .nav {
-  max-width: 1280px;
+  max-width: $max-width;
 }
 
 .link {
@@ -39,7 +40,7 @@
   width: 100%;
   padding: 16px;
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: $max-width;
   display: flex;
   flex-direction: column;
   align-items: center;

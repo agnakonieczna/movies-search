@@ -1,8 +1,10 @@
 @use '../../../styles/colors' as *;
+@use '../../../styles/layout' as *;
+
 
 .link {
   position: relative;
-  width: 185px;
+  width: $card-width;
   margin: 0 auto;
   min-height: 310px;
   display: flex;

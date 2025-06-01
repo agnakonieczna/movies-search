@@ -3,21 +3,25 @@ import Pagination from '../Pagination';
 import Error from '../views/ErrorView';
 import MovieItem from './MovieItem';
 import Loading from '../views/LoadingView';
-import { useSearchParams } from 'react-router';
 import { skipToken } from '@reduxjs/toolkit/query';
 import EmptyView from '../views/EmptyView';
 import { Title, Text } from '../common';
 import styles from './index.module.scss';
 
-const MoviesList = () => {
-  const [searchParams] = useSearchParams();
-  const query = searchParams.get('query');
-  const page = Number(searchParams.get('page')) || 1;
+const MoviesList = ({
+  query,
+  currentPage,
+  handlePageChange,
+}: {
+  query: string | null;
+  currentPage: number;
+  handlePageChange: (page: number) => void;
+}) => {
   const {
     data: movies,
     error,
     isFetching,
-  } = useSearchMoviesQuery(query ? { query, page } : skipToken);
+  } = useSearchMoviesQuery(query ? { query, page: currentPage } : skipToken);
 
   if (error) {
     return <Error error={error} />;
@@ -44,10 +48,14 @@ const MoviesList = () => {
     <>
       <div className={styles.grid}>
         {movies.results.map((movie) => (
-          <MovieItem key={movie.id} movie={movie} />
+          <MovieItem key={movie.id} {...movie} />
         ))}
       </div>
-      <Pagination totalPages={movies.total_pages} />
+      <Pagination
+        totalPages={movies.total_pages}
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+      />
     </>
   );
 };

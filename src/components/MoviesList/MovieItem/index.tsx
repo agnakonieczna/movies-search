@@ -5,16 +5,13 @@ import Poster from '../../Poster';
 import SmallText from '../../common/SmallText';
 import styles from './index.module.scss';
 
-const MovieItem = ({ movie }: { movie: Movie }) => {
+const MovieItem = ({ id, title, poster_path, vote_average = 0 }: Movie) => {
   return (
-    <Link to={`${movie.id}`} className={styles.link}>
-      <Poster title={movie.title} poster_path={movie.poster_path} />
+    <Link to={`${id}`} className={styles.link}>
+      <Poster title={title} poster_path={poster_path} />
       <div className={styles.details}>
-        <SmallText className={styles.title}>{movie.title}</SmallText>
-        <MovieRating
-          className={styles.rating}
-          vote_average={movie.vote_average || 0}
-        />
+        <SmallText className={styles.title}>{title}</SmallText>
+        <MovieRating className={styles.rating} vote_average={vote_average} />
       </div>
     </Link>
   );
