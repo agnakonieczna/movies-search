@@ -8,18 +8,20 @@ import styles from './index.module.scss';
 const FavouriteMovies = () => {
   const favouriteMovies = useSelector(selectFavouriteMovies);
 
-  console.log({ favouriteMovies });
-
   if (favouriteMovies.length === 0)
     return (
       <EmptyView>
-        <Title>No favourites movies yet</Title>
+        <Title data-testid="no-favourites-title">
+          No favourites movies yet
+        </Title>
       </EmptyView>
     );
 
   return (
     <div className={styles.container}>
-      <Title className={styles.title}>Your favourite movies list:</Title>
+      <Title className={styles.title} data-testid="favourites-title">
+        Your favourite movies list:
+      </Title>
       <div className={styles.movies_container}>
         {favouriteMovies.map((id) => (
           <FavouriteMovieItem key={id} id={id.toString()} />

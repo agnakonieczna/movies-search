@@ -15,7 +15,10 @@ const FavouritesButton = ({ movieId }: { movieId: number }) => {
   };
 
   return (
-    <Button onClick={() => handleAddToFavourites(movieId)}>
+    <Button
+      onClick={() => handleAddToFavourites(movieId)}
+      data-testid={`favourites-movie-${movieId}`}
+    >
       {isFavouriteMovieAdded ? 'Remove from favourites' : 'Add to favourites'}
     </Button>
   );
